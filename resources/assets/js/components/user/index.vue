@@ -370,9 +370,6 @@
         this.checkUsername('/check-email', this.formRegister.email)
       }
     },
-    created() {
-      this.$localStorage.set('auth', false)
-    },
     mounted() {
       this.crsf_token = document
         .querySelector('meta[name="csrf-token"]')
@@ -464,6 +461,7 @@
                   '</div>' +
                   '</div>'
               } else {
+                this.$localStorage.set('auth', true)
                 this.$router.go('/home')
               }
             })

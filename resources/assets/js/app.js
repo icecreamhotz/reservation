@@ -4,14 +4,15 @@
    * includes Vue and other libraries. It is a great starting point when
    * building robust, powerful web applications using Vue and Laravel.
    */
-  import App from './components/user/App.vue';
-  import VeeValidate from 'vee-validate';
-  import Vue from 'vue';
-  import router from './router';
+  import App from './components/user/App.vue'
+  import VeeValidate from 'vee-validate'
+  import Vue from 'vue'
+  import router from './router'
   import VueLocalStorage from 'vue-localstorage'
+  import store from './store'
  
   Vue.use(VueLocalStorage)
-  Vue.use(VeeValidate);
+  Vue.use(VeeValidate)
   /**
    * Next, we will create a fresh Vue application instance and attach it to
    * the page. Then, you may begin adding components to this application
@@ -25,5 +26,6 @@
       }
     },
     router,
+    store,
     render: h => h(App)
   });

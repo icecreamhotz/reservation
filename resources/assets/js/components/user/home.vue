@@ -241,9 +241,6 @@
       return {
         title: 'hello world'
       }
-    },
-    created() {
-      this.$localStorage.set('auth', true)
     }
   }
 </script>
